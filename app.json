@@ -1,0 +1,8 @@
+{
+  "name": "slim-heroku",
+  "scripts": {},
+  "env": {},
+  "formation": {},
+  "addons": [],
+  "buildpacks": []
+}
