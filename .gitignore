@@ -5,7 +5,7 @@
 
 /metrics/*
 *.sqlite
-.env
+#.env
 
 #locaweb config
 php.ini
