@@ -1,0 +1,26 @@
+{
+  "name": "mk-financial",
+  "description": "sistema de gerenciamento de consultoras MK",
+  "main": "index.js",
+  "authors": [
+    "Wescley Matos"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "MK",
+    "financeiro"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "qunit": "^2.1.1",
+    "materialize": "^0.97.8",
+    "startbootstrap-sb-admin-2": "sbadmin#^3.3.7+1"
+  }
+}

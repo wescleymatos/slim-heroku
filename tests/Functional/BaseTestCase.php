@@ -54,6 +54,10 @@ class BaseTestCase extends \PHPUnit_Framework_TestCase
         // Use the application settings
         $settings = require __DIR__ . '/../../src/settings.php';
 
+        $containerBuilder = new \DI\ContainerBuilder();
+        $containerBuilder->addDefinitions(__DIR__ . '/../../src/phpdi.php');
+        $di = $containerBuilder->build();
+
         // Instantiate the application
         $app = new App($settings);
 

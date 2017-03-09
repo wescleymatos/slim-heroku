@@ -9,11 +9,10 @@ class HomepageTest extends BaseTestCase
      */
     public function testGetHomepageWithoutName()
     {
-        $response = $this->runApp('GET', '/');
+        $response = $this->runApp('GET', '/home');
 
         $this->assertEquals(200, $response->getStatusCode());
-        $this->assertContains('SlimFramework', (string)$response->getBody());
-        $this->assertNotContains('Hello', (string)$response->getBody());
+        $this->assertContains('Tela de Login', (string)$response->getBody());
     }
 
     /**
@@ -21,10 +20,10 @@ class HomepageTest extends BaseTestCase
      */
     public function testGetHomepageWithGreeting()
     {
-        $response = $this->runApp('GET', '/name');
+        $response = $this->runApp('GET', '/home/Teste');
 
         $this->assertEquals(200, $response->getStatusCode());
-        $this->assertContains('Hello name!', (string)$response->getBody());
+        $this->assertContains('Teste', (string)$response->getBody());
     }
 
     /**
@@ -32,7 +31,7 @@ class HomepageTest extends BaseTestCase
      */
     public function testPostHomepageNotAllowed()
     {
-        $response = $this->runApp('POST', '/', ['test']);
+        $response = $this->runApp('POST', '/home', ['test']);
 
         $this->assertEquals(405, $response->getStatusCode());
         $this->assertContains('Method not allowed', (string)$response->getBody());
