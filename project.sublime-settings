@@ -1,0 +1,10 @@
+{
+	"phpcompanion":
+	{
+		"exclude_dir":
+		[
+			"vendor",
+			"build"
+		]
+	}
+}

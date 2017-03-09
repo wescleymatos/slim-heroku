@@ -1,0 +1,42 @@
+{
+  "name": "mk-financial",
+  "version": "1.0.0",
+  "description": "sistema de gerenciamento de consultoras MK",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "grunt:dev": "./node_modules/.bin/grunt dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/wescleymatos/mk-financial.git"
+  },
+  "keywords": [
+    "MK",
+    "financeiro"
+  ],
+  "author": "Wescley Matos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/wescleymatos/mk-financial/issues"
+  },
+  "homepage": "https://gitlab.com/wescleymatos/mk-financial#README",
+  "dependencies": {
+    "bower": "^1.8.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-htmlmin": "^2.1.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-processhtml": "^0.4.1"
+  }
+}
