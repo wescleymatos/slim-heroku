@@ -11,11 +11,22 @@ if (PHP_SAPI == 'cli-server') {
 
 require __DIR__ . '/../vendor/autoload.php';
 
-session_start();
+//session_start();
+
+// Instantiate the enviroment
+$dotenv = new \Dotenv\Dotenv(__DIR__ . '/../');
+$dotenv->load();
+
+// Instantiate the container inversion of control
+$containerBuilder = new \DI\ContainerBuilder();
+$containerBuilder->addDefinitions(__DIR__.'/../src/phpdi.php');
+$di = $containerBuilder->build();
 
 // Instantiate the app
 $settings = require __DIR__ . '/../src/settings.php';
-$app = new \Slim\App($settings);
+//$app = new \Slim\App($settings);
+$c = new \Slim\Container($settings);
+$app = new \Slim\App($c);
 
 // Set up dependencies
 require __DIR__ . '/../src/dependencies.php';

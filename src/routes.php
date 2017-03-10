@@ -1,18 +1,7 @@
 <?php
-// Routes
 
-$app->get('/', function ($request, $response, $args) {
-    // Sample log message
-    $this->logger->info("Slim-Skeleton '/' route");
+require 'routes/home.php';
+require 'routes/login.php';
+require 'routes/products.php';
+require 'routes/customer.php';
 
-    // Render index view
-    return $this->renderer->render($response, 'index.phtml', $args);
-});
-
-$app->get('/clientes', function ($request, $response, $args) {
-    // Sample log message
-    $this->logger->info("Slim-Skeleton '/' route");
-
-    // Render index view
-    return $this->renderer->render($response, 'clientes.phtml', $args);
-});
